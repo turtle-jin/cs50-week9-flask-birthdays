@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Delete</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <p>Are you sure you want to delete <b>{{delete_name}} (Birthday: {{month}}/{{day}}) </b> ?</p>
+        <div class="yesnoButtons">
+            <form action="/delete" method="post" style="display:inline;">
+                <input type="hidden" name="id" value="{{id_value}}">
+                <button type="submit">Yes</button>
+            </form>
+
+            <form action="/" method="get" style="display:inline;">
+                <button type="submit">No</button>
+            </form>
+        </div>
+    </body>
+</html>

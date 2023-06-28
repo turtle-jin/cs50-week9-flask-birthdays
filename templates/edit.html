@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Edit Birthday</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+    </div>
+    <p>Editing <b>{{edit_name}} (Birthday: {{month}}/{{day}}, ID#:{{id_value}}) </b>:</p>
+
+    <form class="editUpdate" action="/update" method="post">
+        <div>
+            <tag>Name:</tag>
+            <input type="text" name="name" value="{{edit_name}}" placeholder="Enter new name">
+        </div>
+
+        <div>
+            <tag>Month:</tag>
+            <input type="number" min="1" max="12" name="month" value="{{month}}" placeholder="Enter new month">
+        </div>
+
+        <div>
+            <tag>Day:</tag>
+            <input type="number" min="1" max="31" name="day" value="{{day}}" placeholder="Enter new day">
+        </div>
+
+        <input type="hidden" name="id" value="{{ id_value }}">
+        <button type="submit">Save</button>
+
+    </form>
+    <form action="/" method="get" class="editUpdate">
+        <button type="submit">Cancel</button>
+    </form>
+    </body>
+</html>
