@@ -16,17 +16,17 @@
     <form class="editUpdate" action="/update" method="post">
         <div>
             <tag>Name:</tag>
-            <input type="text" name="name" value="{{edit_name}}" placeholder="Enter new name">
+            <input type="text" name="name" value="{{edit_name}}" placeholder="Enter new name" required>
         </div>
 
         <div>
             <tag>Month:</tag>
-            <input type="number" min="1" max="12" name="month" value="{{month}}" placeholder="Enter new month">
+            <input type="number" min="1" max="12" name="month" value="{{month}}" placeholder="Enter new month" required>
         </div>
 
         <div>
             <tag>Day:</tag>
-            <input type="number" min="1" max="31" name="day" value="{{day}}" placeholder="Enter new day">
+            <input type="number" min="1" max="31" name="day" value="{{day}}" placeholder="Enter new day" required>
         </div>
 
         <input type="hidden" name="id" value="{{ id_value }}">

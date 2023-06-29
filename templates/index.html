@@ -16,13 +16,13 @@
                 <h2>Add a Birthday</h2>
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form action="/" method="post">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="number" min="1" max="12" name="month" placeholder="Month">
-                    <input type="number" min="1" max="31" name="day" placeholder="Day">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="number" min="1" max="12" name="month" placeholder="Month" required>
+                    <input type="number" min="1" max="31" name="day" placeholder="Day" required>
                     <button type="submit">Add Birthday</button>
 
                 </form>
-                <p>{{placeholder}}</p>
+                
             </div>
 
             <div class="section">
